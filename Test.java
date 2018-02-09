@@ -96,6 +96,24 @@ public class Test {
 				System.out.println("the oldest painting dates"+" "+max+" "+"and it's name is"+" "+Painting.painting[thesi].getTitle());
 			}
 			else if(choice==5){
+				System.out.println("Insert a number between 0 and 9 to to reveal the painting in this index");
+								int number=scanner.nextInt();
+								if(number<0||number>=10){
+									System.out.println("No valid number");
+								}
+								else{
+									if(Painting.painting[number]!= null){
+										System.out.println("A painting was found in index"+" "+number+":"+Painting.painting[number].getTitle());
+										System.out.println("The creation date was:" +Painting.painting[number].getDate()+" "+"Try changing the year of creation");
+										System.out.print("New year:"+" ");
+										int NewYear=scanner.nextInt();
+										Painting.painting[number].setDate(NewYear);
+										System.out.println("New painting information:"+Painting.painting[number].toString());
+									}
+									else{
+									System.out.println("Not painting found");
+									}
+								}
 
 			}
 			else{
