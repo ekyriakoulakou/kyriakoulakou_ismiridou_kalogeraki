@@ -26,20 +26,22 @@ public class Test {
 		while (true){//η συνθήκη θα είναι πάντα αληθής
 			System.out.println("");
 			System.out.println("");
-			System.out.println("**************** Welcome to our DMST Gallery****************");
+			System.out.println("**************** Welcome to our Gallery****************");
 			System.out.println("------ Menu ------");
 			System.out.println("Type 1 to display Painters' paintings");
 			System.out.println("Type 2 to search Painters' information according to birthcountry");
 			System.out.println("Type 3 to add a new Painter");
+			System.out.println("Type 4 to find the oldest painting");
+			System.out.println("Type 5 to find a painting and change it's year of creation");
 			System.out.println("Type here:");
 
 			int choice = scanner.nextInt();
 
 			if (choice == 1){
 				System.out.println("\nList of Painters: ");
-				for (Painter  painter: Painter.paint){//Εκτύπωση όλων των αντικειμένων του πίνακα sing
+				for (Painter  painter: Painter.paint){//Εκτύπωση όλων των αντικειμένων του πίνακα
 					if (painter!= null)//αν υπάρχει αντικείμενο στη θέση
-						System.out.println(painter.toString());//Καλεί την toString για να εμφανίσει το όνομα και το id από την κλάση Singer
+						System.out.println(painter.toString());//Καλεί την toString
 				}
 			}
 
@@ -47,55 +49,44 @@ public class Test {
 			else if (choice == 2){
 				System.out.println("");
 				System.out.println(" Give Painter's Birth Country ");
-				System.out.println(" Type here: ");
-				int BirthCountry=scanner.nextInt();
+				System.out.print(" Type here: "+" ");
+				String BirthCountry=scanner.next();
 						int counter=0;
 						for(int y=0; y<Painter.paint.length; y++){
 							if(Painter.paint[y] != null){
 
-								if (Painter.paint[y].getCountry.equals(BirthCountry))
+								if (Painter.paint[y].getCountry().equals(BirthCountry))
 									System.out.println(Painter.paint[y].toString());
 									counter++;
 
-								}
+							}
 						}
 
 						if (counter==0) {
 							System.out.println("No results found regarding your search");
 						}
 
-				/*	System.out.println(counter+" "+ "songs were found:");
-						if(counter>0){
-							for(int y=0; y<Song.song.length; y++){
-								if(Song.song[y]!= null){
-									if (frank.equals(Song.song[y].getSinger()))
-										System.out.println(Song.song[y].toString());
-
-								}
-							}
-
-						}*/
-
-
 			}
 
 			else if (choice==3) {
-				System.out.println("Insert painter's name:");
+				System.out.print("Insert painter's name:"+" ");
 				String name=scanner.next();
-				System.out.println("Insert painter's birthdate:");
+				System.out.print("Insert painter's birthdate:"+" ");
 				int birthdate=scanner.nextInt();
-				System.out.println("Insert painter's birthcountry:");
+				System.out.print("Insert painter's birthcountry:"+" ");
 				String birthcountry=scanner.next();
-				System.out.println("Insert painter's wikipedia page url:");
+				System.out.print("Insert painter's wikipedia page url:"+" ");
 				String url=scanner.next();
 				Painter NewPainter = new Painter(name,birthdate,birthcountry,url);
-				System.out.println(Painter.paint[NewPainter].toString());
+				System.out.println(name +" "+"has been stored");
+			}
 
 
 
-
+			else{
+				System.out.println("wrong input");
+				System.out.println("----------------------------------------\n");
 			}
 		}
 	}
 }
-
