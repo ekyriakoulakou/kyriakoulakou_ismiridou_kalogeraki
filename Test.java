@@ -49,7 +49,7 @@ public class Test {
 			else if (choice == 2){
 				System.out.println("");
 				System.out.println(" Give Painter's Birth Country ");
-				System.out.print(" Type here: "+" ");
+				System.out.println(" Type here: ");
 				String BirthCountry=scanner.next();
 						int counter=0;
 						for(int y=0; y<Painter.paint.length; y++){
@@ -69,20 +69,35 @@ public class Test {
 			}
 
 			else if (choice==3) {
-				System.out.print("Insert painter's name:"+" ");
+				System.out.println("Insert painter's name:");
 				String name=scanner.next();
-				System.out.print("Insert painter's birthdate:"+" ");
+				System.out.println("Insert painter's birthdate:");
 				int birthdate=scanner.nextInt();
-				System.out.print("Insert painter's birthcountry:"+" ");
+				System.out.println("Insert painter's birthcountry:");
 				String birthcountry=scanner.next();
-				System.out.print("Insert painter's wikipedia page url:"+" ");
+				System.out.println("Insert painter's wikipedia page url:");
 				String url=scanner.next();
 				Painter NewPainter = new Painter(name,birthdate,birthcountry,url);
 				System.out.println(name +" "+"has been stored");
 			}
 
+			else if(choice==4){
+				int max=0;
+				int thesi=0;
+				int y;
+				for(y=0; y<Painting.painting.length; y++){
+					if(Painting.painting[y]!= null){
+						if(max<Painting.painting[y].getDate()){
+							max=Painting.painting[y].getDate();
+							thesi=y;
+						}
+					}
+				}
+				System.out.println("the oldest painting dates"+" "+max+" "+"and it's name is"+" "+Painting.painting[thesi].getTitle());
+			}
+			else if(choice==5){
 
-
+			}
 			else{
 				System.out.println("wrong input");
 				System.out.println("----------------------------------------\n");
