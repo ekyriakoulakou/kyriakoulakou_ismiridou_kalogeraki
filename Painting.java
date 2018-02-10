@@ -1,9 +1,9 @@
 
 public class Painting {
 	static Painting painting[]= new Painting[10];
-	private String title;
-	private Painter painter;
-	private int date;
+	private String title; //titlos pinaka
+	private Painter painter; //o zwgrafos pou to dhmiourghse
+	private int date; //xronologia kataskeuhs
 	static int counterPainting=0;
 
 	public Painting(String title,Painter painter,int date) {
@@ -29,15 +29,15 @@ public class Painting {
 		return date;
 	}
 	public void setDate(int date) {
-		if(date>0){
-		this.date=date;
+		if(date>0){						//Periorismos ws pros thn eiserxomenh apo to xrhsth hmeromhnia
+			this.date=date;
 		}
 		else{
-		System.out.println("Date hasn't changed");
+			System.out.println("Date hasn't changed");
 		}
 	}
 	public String toString() {
-		return "Painting [title=" +title + ",painter=" +painter+ ",date=" +date+ "]";
+		return "Painting [title="+" "+title +" "+ ",painter =" +" "+painter+" "+ ",year of creation=" +" "+date+ "]";
 	}
 
 }

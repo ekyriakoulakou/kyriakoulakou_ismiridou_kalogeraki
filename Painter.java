@@ -1,10 +1,10 @@
 
 public class Painter {
 	static Painter paint[]=new Painter [10];
-	private String name;
-	private int birthyear;
-	private String country;
-	private String url;
+	private String name; //onoma zwgrafou
+	private int birthyear; //hmeromhnia gennhshs
+	private String country; //xwra katagwghs
+	private String url; //url istoselidas wikipedia me plhrofories gia to zwgrafo
 	static int counterPainters=0;
 
 	public Painter(String name, int birthyear, String country, String url) {
@@ -44,8 +44,7 @@ public class Painter {
 		this.url=url;
 	}
 
-
 	public String toString() {
-		return "Painter [name="+ name +  ",birthyear =" + birthyear + ",country =" + country+",wikipedia information =" + url +"]";
+		return "Painter [info: name="+" "+ name +" "+ ",birthyear =" +" "+ birthyear +" "+ ",birthcountry =" +" "+ country+" "+",wikipedia information ="+" "+  url +"]";
 	}
 }
