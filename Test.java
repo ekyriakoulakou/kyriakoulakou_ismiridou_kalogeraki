@@ -23,7 +23,7 @@ public class Test {
 
 
 
-		while (true){//synthiki gia epanallhpsh ths emfanishs toy menu meta to peras ka8e vhmatos
+		while (true){//synthiki gia epanalhpsh ths emfanishs toy menu meta to peras ka8e vhmatos
 			System.out.println("");
 			System.out.println("");
 			System.out.println("**************** Welcome to our Gallery****************");
